@@ -12,9 +12,11 @@ def insert_file_rel122(chemin):
     laligne=0
     for ligne in contenu_ligne :
             if (ligne != ''):
-                matrice[laligne,2]=(ligne.split("  "))[0]
-                matrice[laligne,0]=(ligne.split("  "))[1].split(" -- ")[0]
-                matrice[laligne,1]=(ligne.split("  "))[1].split(" -- ")[1]
+                ligne_split = ligne.split("  ")
+                ligne_split_split = ligne_split[1].split(" -- ")
+                matrice[laligne,2]=ligne_split[0]
+                matrice[laligne,0]=ligne_split_split[0]
+                matrice[laligne,1]=ligne_split_split[1]
                 x=float(matrice[laligne,2])
                 x = x/4
                 matrice[laligne,2]= str(x)
