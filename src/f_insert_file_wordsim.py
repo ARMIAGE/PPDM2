@@ -1,6 +1,5 @@
 def insert_file_wordsim(chemin):
     mon_fichier = open(chemin, "r")
-    global contenu
     contenu = mon_fichier.read()
     mon_fichier.close()
     contenu_ligne = contenu.split('\n')
@@ -12,9 +11,10 @@ def insert_file_wordsim(chemin):
     laligne=0
     for ligne in contenu_ligne :
             if (ligne != ''):
-                matrice[laligne,0]=(ligne.split(";"))[0]
-                matrice[laligne,1]=(ligne.split(";"))[1]
-                matrice[laligne,2]=(ligne.split(";"))[2]
+                ligne_split = ligne.split(";")
+                matrice[laligne,0]=ligne_split[0]
+                matrice[laligne,1]=ligne_split[1]
+                matrice[laligne,2]=ligne_split[2]
                 x=float(matrice[laligne,2])
                 x = x/10
                 matrice[laligne,2]= str(x)
