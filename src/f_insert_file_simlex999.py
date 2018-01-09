@@ -1,17 +1,27 @@
 import csv
 import numpy as np
-
+CSVFile = "C:/Users/Alexa/Desktop/PPD/PROJET/DATA/SimLex-999.txt"
 def insert_file_simlex999(CSVFile):
-    global data
-    
-    i = 0
+    mon_fichier = open(CSVFile, "r")
+    global contenu
+    contenu = mon_fichier.read()
+    mon_fichier.close()
+    contenu_ligne = contenu.split('\n')
+    nb_lines = len(contenu_ligne) -1
+    a = np.zeros(shape = (nb_lines,3))
+    b = np.array(a,dtype=str)
+    matrice = np.empty_like(b)
 
-    with open(CSVFile) as f:
-        reader = csv.reader(f, dialect='excel', delimiter="\t")
-        for row in reader:
-            if i == 0:
-                data = np.matrix([row])
-                i = i + 1
-            else:
-                data = np.append(data, np.matrix([row]), axis=0)
-    return data[:, [0, 1, 3]]
+    del contenu_ligne [0]
+
+    laligne=0
+    for ligne in contenu_ligne :
+        if (ligne != ''):
+            matrice[laligne,0]=(ligne.split("\t"))[0]
+            matrice[laligne,1]=(ligne.split("\t"))[1]
+            matrice[laligne,2]=(ligne.split("\t"))[3]
+            x=float(matrice[laligne,2])
+            x = x/10
+            matrice[laligne,2]= str(x)
+            laligne = laligne +1
+    return matrice
