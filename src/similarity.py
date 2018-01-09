@@ -1,4 +1,4 @@
-import operator
+import fonctions_utiles
 
 def similarite (matrice)
 
