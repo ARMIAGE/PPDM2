@@ -17,9 +17,10 @@ def insert_file_simlex999(CSVFile):
     laligne=0
     for ligne in contenu_ligne :
         if (ligne != ''):
-            matrice[laligne,0]=(ligne.split("\t"))[0]
-            matrice[laligne,1]=(ligne.split("\t"))[1]
-            matrice[laligne,2]=(ligne.split("\t"))[3]
+            ligne_split = ligne.split("\t")
+            matrice[laligne,0]=ligne_split[0]
+            matrice[laligne,1]=ligne_split[1]
+            matrice[laligne,2]=ligne_split[3]
             x=float(matrice[laligne,2])
             x = x/10
             matrice[laligne,2]= str(x)

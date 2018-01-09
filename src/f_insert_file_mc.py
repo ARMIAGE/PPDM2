@@ -12,9 +12,10 @@ def insert_file_mc(chemin):
     laligne=0
     for ligne in contenu_ligne :
             if (ligne != ''):
-                matrice[laligne,0]=(ligne.split(";"))[0]
-                matrice[laligne,1]=(ligne.split(";"))[1]
-                matrice[laligne,2]=(ligne.split(";"))[2]
+                ligne_split = ligne.split(";")
+                matrice[laligne,0]=ligne_split[0]
+                matrice[laligne,1]=ligne_split[1]
+                matrice[laligne,2]=ligne_split[2]
                 x=float(matrice[laligne,2])
                 x = x/4
                 matrice[laligne,2]= str(x)
