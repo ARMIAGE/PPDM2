@@ -1,4 +1,5 @@
 import operator
+import numpy as np
 
 
 def tri_matrice(matrice):
@@ -21,3 +22,7 @@ def ajouter_colonne_rang(matrice):
         i = i + 1
         rang = rang + 1
     return matrice
+
+
+def tri_alphabetique(matrice):
+    return np.matrix(sorted(matrice, key=operator.itemgetter(0, 1)))

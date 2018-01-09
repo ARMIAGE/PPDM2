@@ -3,10 +3,10 @@ def insert_file_rg(path):
     content = mon_fichier.read()
     mon_fichier.close()
 
-    # splitter par ligne pour créer une liste
+    # splitter par ligne pour creer une liste
     content_line = content.split("\n")
 
-    # remplacer les tabulations par des virgules dans la liste (entre chaque mot) quand nécessaire
+    # remplacer les tabulations par des virgules dans la liste (entre chaque mot) quand necessaire
     # content_line = [cl.replace('\t',',') for cl in content_line]
     # print(content_line)
 

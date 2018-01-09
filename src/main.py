@@ -8,6 +8,8 @@ from f_insert_file_UMNRS_similarity import insert_file_UMNRS_similarity
 from f_insert_file_cos_matrix_brm_IFR import insert_file_cos_matrix_brm_ifr
 import text8
 import argparse
+import fonctions_utiles
+
 
 # model = initModel()
 
@@ -27,5 +29,10 @@ data = insert_file_simlex999(CSVFile)
 # Coeffword2vec=round(model.wv.similarity(word1, word2),2)
 # print(Coeffword2vec)
 
-print(data[:, (0, 1)])
-print(round(model.wv.similarity(word1, word2), 2))
+# print(data[:, (0, 1)])
+# print(round(model.wv.similarity(word1, word2), 2))
+
+#print(data)
+
+#fonctions_utiles.tri_alphabetique(data)
+
