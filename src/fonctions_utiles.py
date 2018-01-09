@@ -1,5 +1,6 @@
 import operator
 import numpy as np
+import scipy
 
 
 def tri_matrice(matrice):
@@ -11,6 +12,7 @@ def extract_liste_de_mots(matrice):
 
 
 def calcul_similarite(liste_mots):
+
     return matrice_word2vec
 
 
@@ -26,3 +28,12 @@ def ajouter_colonne_rang(matrice):
 
 def tri_alphabetique(matrice):
     return np.matrix(sorted(matrice, key=operator.itemgetter(0, 1)))
+
+
+def get_rang(matrice):
+    return matrice[:, 2]
+
+
+def calcul_corellation(rang_humain, rang_word2vec):
+    tau, p_value = scipy.stats.kendalltau(rang_humain, rang_word2vec)
+    return tau

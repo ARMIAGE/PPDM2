@@ -17,13 +17,13 @@ def similarite(matrice):
     matrice_word2vec = fonctions_utiles.ajouter_colonne_rang(matrice_word2vec)
 
     # Tri Alphabetique pour comparaison finale
-    matrice = tri_alphabetique(matrice)
-    matrice_word2vec = tri_alphabetique(matrice_word2vec)
+    matrice = fonctions_utiles.tri_alphabetique(matrice)
+    matrice_word2vec = fonctions_utiles.tri_alphabetique(matrice_word2vec)
 
     # Recuperation du rang
-    rang_humain = get_rang(matrice)
-    rang_word2vec = get_rang(matrice_word2vec)
+    rang_humain = fonctions_utiles.get_rang(matrice)
+    rang_word2vec = fonctions_utiles.get_rang(matrice_word2vec)
 
     # Qualité du fichier compare
-    coef_similarite = calcul_corellation(rang_humain, rang_word2vec)
+    coef_similarite = fonctions_utiles.calcul_corellation(rang_humain, rang_word2vec)
     return coef_similarite
