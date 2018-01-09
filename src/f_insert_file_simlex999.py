@@ -1,6 +1,6 @@
 import csv
 import numpy as np
-CSVFile = "C:/Users/Alexa/Desktop/PPD/PROJET/DATA/SimLex-999.txt"
+
 def insert_file_simlex999(CSVFile):
     mon_fichier = open(CSVFile, "r")
     global contenu

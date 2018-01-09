@@ -1,0 +1,9 @@
+#Python
+Numpy
+Csv
+Gensim and Word2vec
+Loggings
+Warnings
+
+#Word Embedding Learning
+Text8
