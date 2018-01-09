@@ -4,6 +4,7 @@ Csv
 Gensim and Word2vec
 Loggings
 Warnings
+Operator
 
 #Word Embedding Learning
 Text8

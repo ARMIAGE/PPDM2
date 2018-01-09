@@ -7,7 +7,7 @@ from f_insert_file_rg import insert_file_rg
 from f_insert_file_UMNRS_similarity import insert_file_UMNRS_similarity
 import text8
 
-initModel()
+#model = initModel()
 
 CSVFile = "../DATA/SimLex-999.txt"
 
@@ -26,7 +26,7 @@ print(CoeffSimLex)
 print("-------")
 
 print("Gensim Word2Vec Text8 estimation : ")
-Coeffword2vec=round(text8.model.wv.similarity(word1, word2),2)
+Coeffword2vec=round(model.wv.similarity(word1, word2),2)
 print(Coeffword2vec)
 
 print("-------")
