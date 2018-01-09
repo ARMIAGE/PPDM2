@@ -5,6 +5,7 @@ from f_insert_file_mc import insert_file_mc
 from f_insert_file_wordsim import insert_file_wordsim
 from f_insert_file_rg import insert_file_rg
 from f_insert_file_UMNRS_similarity import insert_file_UMNRS_similarity
+from f_insert_file_cos_matrix_brm_IFR import insert_file_cos_matrix_brm_IFR
 import text8
 import argparse
 
