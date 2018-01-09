@@ -6,30 +6,25 @@ from f_insert_file_wordsim import insert_file_wordsim
 from f_insert_file_rg import insert_file_rg
 from f_insert_file_UMNRS_similarity import insert_file_UMNRS_similarity
 import text8
+import argparse
 
 #model = initModel()
 
 CSVFile = "../DATA/SimLex-999.txt"
 
 data = insert_file_simlex999(CSVFile)
-print("-------")
-word1 = data[1,0];
-word2 = data[1,1];
-print("Word 1 : " + word1 + " - Word 2 : " + word2)
 
-print("-------")
+#word1 = data[1,0];
+#word2 = data[1,1];
+#print("Word 1 : " + word1 + " - Word 2 : " + word2)
 
-print("SimLex999 estimation : ")
-CoeffSimLex = round(float(data[1,2])/10,2)
-print(CoeffSimLex)
+#print("SimLex999 estimation : ")
+#CoeffSimLex = round(float(data[1,2])/10,2)
+#print(CoeffSimLex)
 
-print("-------")
+#print("Gensim Word2Vec Text8 estimation : ")
+#Coeffword2vec=round(model.wv.similarity(word1, word2),2)
+#print(Coeffword2vec)
 
-print("Gensim Word2Vec Text8 estimation : ")
-Coeffword2vec=round(model.wv.similarity(word1, word2),2)
-print(Coeffword2vec)
-
-print("-------")
-
-
-
+print(data[:,(0,1)])
+print(round(model.wv.similarity(word1, word2),2))
