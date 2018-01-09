@@ -7,7 +7,7 @@ from f_insert_file_rg import insert_file_rg
 from f_insert_file_UMNRS_similarity import insert_file_UMNRS_similarity
 import text8
 
-#initModel()
+initModel()
 
 CSVFile = "../DATA/SimLex-999.txt"
 
