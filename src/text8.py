@@ -12,5 +12,5 @@ def initModel():
     model.save('W2V_text8_Model.bin')
     return model
 
-initModel()
+#initModel()
 
