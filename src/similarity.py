@@ -25,5 +25,5 @@ def similarite (matrice)
     rang_word2vec = get_rang(matrice_word2vec)
     
     #Qualité du fichier comparé
-    coef_similarite = calcul_corellation(rang_humain, rang_word2vec)
+    coef_similarite = calcul_corellation(rang_humain, rang_word2vec) #KENDALL
 return coef_similarite
