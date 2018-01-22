@@ -7,8 +7,7 @@ def similarite(matrice):
 
     # Creation matrice W2V (mot1, mot2, coef)
     matrice_word2vec = calcul_similarite(liste_mots)
-<<<<<<< HEAD
-    
+
     #Tri par ordre de similarité
     matrice = tri_matrice(matrice)
     matrice_word2vec = tri_matrice(matrice_word2vec)
@@ -28,7 +27,6 @@ def similarite(matrice):
     #Qualité du fichier comparé
     coef_similarite = calcul_corellation(rang_humain, rang_word2vec) #KENDALL
 return coef_similarite
-=======
 
     # Tri par ordre de similarite
     matrice = fonctions_utiles.tri_matrice(matrice)
@@ -49,4 +47,3 @@ return coef_similarite
     # Qualité du fichier compare
     coef_similarite = fonctions_utiles.calcul_corellation(rang_humain, rang_word2vec)
     return coef_similarite
->>>>>>> 7e5ec9440f1ea03584a00c86037f3381957d5206

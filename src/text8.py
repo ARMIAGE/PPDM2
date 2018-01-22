@@ -9,11 +9,8 @@ logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=lo
 def initModel():
     sentences = word2vec.Text8Corpus("../DATA/text8")
     model = word2vec.Word2Vec(sentences, size=200)
-<<<<<<< HEAD
     model.save('W2V_text8_Model.bin')
     return model
 
 initModel()
-=======
-    return model
->>>>>>> 7e5ec9440f1ea03584a00c86037f3381957d5206
+
