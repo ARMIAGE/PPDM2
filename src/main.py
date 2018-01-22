@@ -1,22 +1,10 @@
-from file_insertion import insert_file_simlex999
-from f_insert_file_rel122 import insert_file_rel122
-from f_insert_file_mturk771 import insert_file_mturk771
-from f_insert_file_mc import insert_file_mc
-from f_insert_file_wordsim import insert_file_wordsim
-from f_insert_file_rg import insert_file_rg
-from f_insert_file_UMNRS_similarity import insert_file_UMNRS_similarity
-from f_insert_file_cos_matrix_brm_IFR import insert_file_cos_matrix_brm_ifr
+import file_insertion
 import text8
 import argparse
 import fonctions_utiles
 
-<<<<<<< HEAD
-model = Word2Vec.load('W2V_text8_Model.bin')
-=======
+model = word2vec.Word2Vec.load('W2V_text8_Model.bin')
 
-# model = initModel()
-
->>>>>>> 7e5ec9440f1ea03584a00c86037f3381957d5206
 CSVFile = "../DATA/SimLex-999.txt"
 
 data = insert_file_simlex999(CSVFile)
@@ -39,8 +27,6 @@ data = insert_file_simlex999(CSVFile)
 #print(data)
 
 #fonctions_utiles.tri_alphabetique(data)
-
-<<<<<<< HEAD
 
 # calcul_similarite
 
@@ -78,5 +64,3 @@ long=len(matrice)-len(ListeNotIn)
 print(data[500,])
 M = np.delete(data, (500), axis=0)
 print(M[500,])
-=======
->>>>>>> 7e5ec9440f1ea03584a00c86037f3381957d5206

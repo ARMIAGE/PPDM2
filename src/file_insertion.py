@@ -1,7 +1,5 @@
 import pandas as pd
 import numpy as np
-import xlrd
-import csv
 
 
 def insert_file_cos_matrix_brm_ifr(path):
