@@ -1,7 +1,6 @@
 import file_insertion
 import argparse
 import fonctions_utiles
-import text8s
 import similarity
 
 """
@@ -29,7 +28,5 @@ for ligne in matrice_clear:
 
 print(liste_mots[0,1])
 print(liste_mots[1,1]) """
-
-
 
 print(file_insertion.insert_file_cos_matrix_brm_ifr())
