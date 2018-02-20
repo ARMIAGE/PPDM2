@@ -21,13 +21,14 @@ def liste_de_mots_contenus(model, data):
     for row in data:
         rep_mot1 = est_dans_le_model(word_vectors, row[0])
         rep_mot2 = est_dans_le_model(word_vectors, row[1])
-        if(rep_mot1 is False and rep_mot1 is False):
+        if(rep_mot1 is False or rep_mot2 is False):
             data = np.delete(data, (l), axis=0)
             l = l - 1
-    l = l+1
+        l = l+1
     return data
 
 def calcul_similarite(liste_mots):
+    matrice_word2vec=liste_mots
     return matrice_word2vec
 
 

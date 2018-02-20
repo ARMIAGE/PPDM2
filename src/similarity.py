@@ -2,6 +2,10 @@ import fonctions_utiles
 
 
 def similarite(matrice):
+    
+    #Verification de l'existence des mots dans le model
+    fonctions_utiles.liste_de_mots_contenus(model, data)
+    
     # Extraction de la liste des mots (mot1, mot2)
     liste_mots = fonctions_utiles.extract_liste_de_mots(matrice)
 
