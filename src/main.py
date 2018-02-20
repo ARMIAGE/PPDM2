@@ -1,9 +1,10 @@
 import file_insertion
 import argparse
 import fonctions_utiles
-import text8
+import text8s
 import similarity
 
+"""
 model = word2vec.Word2Vec.load('W2V_text8_Model.bin')
 
 CSVFile = "../DATA/SimLex-999.txt"
@@ -27,4 +28,8 @@ for ligne in matrice_clear:
     #CREER LA MATRICE W2V MOT1, MOT2, VALEUR
 
 print(liste_mots[0,1])
-print(liste_mots[1,1])
+print(liste_mots[1,1]) """
+
+
+
+print(file_insertion.insert_file_cos_matrix_brm_ifr())

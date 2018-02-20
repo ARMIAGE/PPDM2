@@ -2,8 +2,9 @@ import pandas as pd
 import numpy as np
 
 
-def insert_file_cos_matrix_brm_ifr(path):
+def insert_file_cos_matrix_brm_ifr():
     # recuperation des donnees de chaque onglet
+    path = "../DATA/cos_matrix_brm_IFR.xlsx"
     first_sheet = pd.read_excel(path, sheetname='1st_200')
     second_sheet = pd.read_excel(path, sheetname='2nd_200')
     third_sheet = pd.read_excel(path, sheetname='last_141')
@@ -21,7 +22,8 @@ def insert_file_cos_matrix_brm_ifr(path):
     return matrix
 
 
-def insert_file_mc(chemin):
+def insert_file_mc():
+    chemin = path = "../DATA/mc.csv"
     mon_fichier = open(chemin, "r")
     global contenu
     contenu = mon_fichier.read()
@@ -46,7 +48,8 @@ def insert_file_mc(chemin):
     return matrice
 
 
-def insert_file_mturk771(path):
+def insert_file_mturk771():
+    path = "../DATA/MTURK-771.csv"
     mon_fichier = open(path, "r")
     content = mon_fichier.read()
     mon_fichier.close()
@@ -69,7 +72,8 @@ def insert_file_mturk771(path):
     return matrice
 
 
-def insert_file_rel122(chemin):
+def insert_file_rel122():
+    chemin = "../DATA/rel122-norms.txt"
     mon_fichier = open(chemin, "r")
     global contenu
     contenu = mon_fichier.read()
@@ -95,7 +99,8 @@ def insert_file_rel122(chemin):
     return matrice
 
 
-def insert_file_rg(path):
+def insert_file_rg():
+    path = "../DATA/rg.csv"
     mon_fichier = open(path, "r")
     content = mon_fichier.read()
     mon_fichier.close()
@@ -133,7 +138,8 @@ def insert_file_rg(path):
     return matrice
 
 
-def insert_file_simlex999(CSVFile):
+def insert_file_simlex999():
+    CSVFile = "../DATA/SimLex-999.txt"
     mon_fichier = open(CSVFile, "r")
     global contenu
     contenu = mon_fichier.read()
@@ -160,7 +166,8 @@ def insert_file_simlex999(CSVFile):
     return matrice
 
 
-def insert_file_UMNRS_similarity(chemin):
+def insert_file_UMNRS_similarity():
+    chemin = "../DATA/UMNSRS_similarity.csv"
     mon_fichier = open(chemin, "r")
     global contenu
     contenu = mon_fichier.read()
@@ -186,7 +193,8 @@ def insert_file_UMNRS_similarity(chemin):
     return matrice
 
 
-def insert_file_wordsim(chemin):
+def insert_file_wordsim():
+    chemin = "../DATA/wordsim.csv"
     mon_fichier = open(chemin, "r")
     global contenu
     contenu = mon_fichier.read()
