@@ -5,6 +5,18 @@ import scipy
 def tri_matrice(matrice):
     return np.matrix(sorted(matrice, key=operator.itemgetter(2), reverse=True))
 
+def calcul_similarite(liste_mots):
+    a = np.zeros(shape = (len(liste_mots),3))
+    b = np.array(a,dtype=str)
+    matrice = np.empty_like(b)
+    i=0
+    for ligne in liste_mots:
+        matrice[(i,0)] = ligne[0]
+        matrice[(i,1)] = ligne[1]
+        matrice[(i,2)] = (round(model.wv.similarity(ligne[0], ligne[1]),2))
+        i = i +1
+    print(matrice)
+    return matrice
 
 def extract_liste_de_mots(matrice):
     return matrice[:, (0, 1)]
@@ -26,11 +38,6 @@ def liste_de_mots_contenus(model, data):
             l = l - 1
         l = l+1
     return data
-
-def calcul_similarite(liste_mots):
-    matrice_word2vec=liste_mots
-    return matrice_word2vec
-
 
 def ajouter_colonne_rang(matrice):
     i = 0

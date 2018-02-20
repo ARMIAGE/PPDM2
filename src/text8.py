@@ -9,7 +9,7 @@ logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=lo
 def initModel():
     sentences = word2vec.Text8Corpus("../DATA/text8")
     model = word2vec.Word2Vec(sentences, size=200)
-    model.save('W2V_text8_Model.bin')
+    model.save('./W2V_text8_Model.bin')
     return model
 
 #initModel()

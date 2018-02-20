@@ -11,20 +11,20 @@ data = file_insertion.insert_file_simlex999(CSVFile)
 
 #similarity.similarite(data)
 
+def calcul_similarite(liste_mots):
+    a = np.zeros(shape = (len(liste_mots),3))
+    b = np.array(a,dtype=str)
+    matrice = np.empty_like(b)
+    i=0
+    for ligne in liste_mots:
+        matrice[(i,0)] = ligne[0]
+        matrice[(i,1)] = ligne[1]
+        matrice[(i,2)] = (round(model.wv.similarity(ligne[0], ligne[1]),2))
+        i = i +1
+    print(matrice)
+    return matrice
+
 matrice_clear = fonctions_utiles.liste_de_mots_contenus(model, data)
 liste_mots = fonctions_utiles.extract_liste_de_mots(matrice_clear)
+matrice = calcul_similarite(liste_mots)
 
-
-#calcul_similarite
-a = np.zeros(shape = (len(liste_mots),3))
-b = np.array(a,dtype=str)
-matrice = np.empty_like(b)
-print(matrice)
-
-i=0
-for ligne in matrice_clear:        
-    print(round(model.wv.similarity(ligne[0], ligne[1]),2))
-    #CREER LA MATRICE W2V MOT1, MOT2, VALEUR
-
-print(liste_mots[0,1])
-print(liste_mots[1,1])
