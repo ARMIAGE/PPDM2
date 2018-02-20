@@ -1,18 +1,18 @@
 import fonctions_utiles
 
-def similarite(matrice):
+def similarite(model, matrice):
     
-    # Verification de l'existence des mots dans le model
-    fonctions_utiles.liste_de_mots_contenus(model, data)
+    #Verification de l'existence des mots dans le model
+    matrice_clear = fonctions_utiles.liste_de_mots_contenus(model, matrice)
     
     # Extraction de la liste des mots (mot1, mot2)
-    liste_mots = fonctions_utiles.extract_liste_de_mots(matrice)
+    liste_mots = fonctions_utiles.extract_liste_de_mots(matrice_clear)
 
     # Creation matrice W2V (mot1, mot2, coef)
-    matrice_word2vec = calcul_similarite(liste_mots)
+    matrice_word2vec = fonctions_utiles.calcul_similarite(model, liste_mots)
     
     # Tri par ordre de similarite
-    matrice = fonctions_utiles.tri_matrice(matrice)
+    matrice = fonctions_utiles.tri_matrice(matrice_clear)
     matrice_word2vec = fonctions_utiles.tri_matrice(matrice_word2vec)
 
     # Ajout du rang
