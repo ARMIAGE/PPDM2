@@ -5,7 +5,7 @@ import scipy
 def tri_matrice(matrice):
     return np.matrix(sorted(matrice, key=operator.itemgetter(2), reverse=True))
 
-def calcul_similarite(liste_mots):
+def calcul_similarite(model, liste_mots):
     a = np.zeros(shape = (len(liste_mots),3))
     b = np.array(a,dtype=str)
     matrice = np.empty_like(b)
@@ -15,7 +15,18 @@ def calcul_similarite(liste_mots):
         matrice[(i,1)] = ligne[1]
         matrice[(i,2)] = (round(model.wv.similarity(ligne[0], ligne[1]),2))
         i = i +1
-    print(matrice)
+    return matrice
+    
+def calcul_similarite(model, liste_mots):
+    a = np.zeros(shape = (len(liste_mots),3))
+    b = np.array(a,dtype=str)
+    matrice = np.empty_like(b)
+    i=0
+    for ligne in liste_mots:
+        matrice[(i,0)] = ligne[0]
+        matrice[(i,1)] = ligne[1]
+        matrice[(i,2)] = (round(model.wv.similarity(ligne[0], ligne[1]),2))
+        i = i +1
     return matrice
 
 def extract_liste_de_mots(matrice):
@@ -50,7 +61,8 @@ def ajouter_colonne_rang(matrice):
 
 
 def tri_alphabetique(matrice):
-    return np.matrix(sorted(matrice, key=operator.itemgetter(0, 1)))
+    a = np.array(matrice)
+    return a[a[:,0].argsort()]
 
 
 def get_rang(matrice):
