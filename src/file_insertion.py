@@ -1,7 +1,6 @@
 import pandas as pd
 import numpy as np
 
-
 def insert_file_cos_matrix_brm_ifr():
     # recuperation des donnees de chaque onglet
     path = "../DATA/cos_matrix_brm_IFR.xlsx"
