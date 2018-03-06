@@ -5,9 +5,9 @@ import numpy as np
 def insert_file_cos_matrix_brm_ifr():
     # recuperation des donnees de chaque onglet
     path = "../DATA/cos_matrix_brm_IFR.xlsx"
-    first_sheet = pd.read_excel(path, sheetname='1st_200')
-    second_sheet = pd.read_excel(path, sheetname='2nd_200')
-    third_sheet = pd.read_excel(path, sheetname='last_141')
+    first_sheet = pd.read_excel(path, sheet_name='1st_200')
+    second_sheet = pd.read_excel(path, sheet_name='2nd_200')
+    third_sheet = pd.read_excel(path, sheet_name='last_141')
 
     # depivotage des donnees de chaque onglet du fichier excel pour avoir la structure : mot 1, mot 2, correlation
     unpivot_first_sheet = pd.melt(first_sheet, id_vars=['CONCEPT'], var_name="mot 2", value_name="correlation")
@@ -83,7 +83,6 @@ def insert_file_rel122():
     a = np.zeros(shape=(nb_lines, 3))
     b = np.array(a, dtype=str)
     matrice = np.empty_like(b)
-
     laligne = 0
     for ligne in contenu_ligne:
         if ligne != '':
@@ -166,31 +165,31 @@ def insert_file_simlex999():
     return matrice
 
 
-def insert_file_UMNRS_similarity():
-    chemin = "../DATA/UMNSRS_similarity.csv"
-    mon_fichier = open(chemin, "r")
-    global contenu
-    contenu = mon_fichier.read()
-    mon_fichier.close()
-    contenu_ligne = contenu.split('\n')
-    del contenu_ligne[0]
-    nb_lines = len(contenu_ligne) - 1
-    a = np.zeros(shape=(nb_lines, 3))
-    b = np.array(a, dtype=str)
-    matrice = np.empty_like(b)
-
-    laligne = 0
-    for ligne in contenu_ligne:
-        if ligne != '':
-            ligne_split = ligne.split(",")
-            matrice[laligne, 0] = ligne_split[2]
-            matrice[laligne, 1] = ligne_split[3]
-            matrice[laligne, 2] = ligne_split[0]
-            x = float(matrice[laligne, 2])
-            x = x / 1600
-            matrice[laligne, 2] = str(x)
-            laligne = laligne + 1
-    return matrice
+# def insert_file_UMNRS_similarity():
+#     chemin = "../DATA/UMNSRS_similarity.csv"
+#     mon_fichier = open(chemin, "r")
+#     global contenu
+#     contenu = mon_fichier.read()
+#     mon_fichier.close()
+#     contenu_ligne = contenu.split('\n')
+#     del contenu_ligne[0]
+#     nb_lines = len(contenu_ligne) - 1
+#     a = np.zeros(shape=(nb_lines, 3))
+#     b = np.array(a, dtype=str)
+#     matrice = np.empty_like(b)
+#
+#     laligne = 0
+#     for ligne in contenu_ligne:
+#         if ligne != '':
+#             ligne_split = ligne.split(",")
+#             matrice[laligne, 0] = ligne_split[2]
+#             matrice[laligne, 1] = ligne_split[3]
+#             matrice[laligne, 2] = ligne_split[0]
+#             x = float(matrice[laligne, 2])
+#             x = x / 1600
+#             matrice[laligne, 2] = str(x)
+#             laligne = laligne + 1
+#     return matrice
 
 
 def insert_file_wordsim():
