@@ -1,6 +1,7 @@
 from gensim.models import word2vec
 import file_insertion
 import similarity
+import fonctions_utiles
 import warnings
 
 warnings.filterwarnings('ignore', '.*nan.*',)
