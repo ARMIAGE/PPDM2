@@ -1,6 +1,6 @@
-from gensim.models import word2vec
 import logging
 import warnings
+from gensim.models import word2vec
 
 warnings.filterwarnings(action='ignore', category=UserWarning, module='gensim')
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
