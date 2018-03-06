@@ -1,4 +1,4 @@
-3.94118	underwear -- lingerie
+3.94118  underwear -- lingerie
 3.85294  digital camera -- photographer
 3.84706  tuition -- fee
 3.81781  leaves -- rake
