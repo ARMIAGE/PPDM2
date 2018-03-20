@@ -1,7 +1,13 @@
 import pandas as pd
 import numpy as np
 
+
+
 def insert_file_cos_matrix_brm_ifr():
+    """
+    Cette fonction à pour but l'insertion et la transformation en matrice du fichier Cos Matrix
+    :return: Une matrice de 3 colonnes (Mot 1, Mot 2, coef de correlation entre 0 et 1)
+    """
     # recuperation des donnees de chaque onglet
     path = "../DATA/cos_matrix_brm_IFR.xlsx"
     first_sheet = pd.read_excel(path, sheet_name='1st_200')
@@ -21,7 +27,12 @@ def insert_file_cos_matrix_brm_ifr():
     return matrix
 
 
+
 def insert_file_mc():
+    """
+        Cette fonction à pour but l'insertion et la transformation en matrice du fichier Mc
+        :return: Une matrice de 3 colonnes (Mot 1, Mot 2, coef de correlation entre 0 et 1)
+        """
     chemin = path = "../DATA/mc.csv"
     mon_fichier = open(chemin, "r")
     global contenu
@@ -48,6 +59,10 @@ def insert_file_mc():
 
 
 def insert_file_mturk771():
+    """
+        Cette fonction à pour but l'insertion et la transformation en matrice du fichier Mturk771
+        :return: Une matrice de 3 colonnes (Mot 1, Mot 2, coef de correlation entre 0 et 1)
+        """
     path = "../DATA/MTURK-771.csv"
     mon_fichier = open(path, "r")
     content = mon_fichier.read()
@@ -72,6 +87,10 @@ def insert_file_mturk771():
 
 
 def insert_file_rel122():
+    """
+        Cette fonction à pour but l'insertion et la transformation en matrice du fichier Rel122
+        :return: Une matrice de 3 colonnes (Mot 1, Mot 2, coef de correlation entre 0 et 1)
+        """
     chemin = "../DATA/rel122-norms.txt"
     mon_fichier = open(chemin, "r")
     global contenu
@@ -98,6 +117,10 @@ def insert_file_rel122():
 
 
 def insert_file_rg():
+    """
+        Cette fonction à pour but l'insertion et la transformation en matrice du fichier Rg
+        :return: Une matrice de 3 colonnes (Mot 1, Mot 2, coef de correlation entre 0 et 1)
+        """
     path = "../DATA/rg.csv"
     mon_fichier = open(path, "r")
     content = mon_fichier.read()
@@ -137,6 +160,10 @@ def insert_file_rg():
 
 
 def insert_file_simlex999():
+    """
+        Cette fonction à pour but l'insertion et la transformation en matrice du fichier Simlex199
+        :return: Une matrice de 3 colonnes (Mot 1, Mot 2, coef de correlation entre 0 et 1)
+        """
     CSVFile = "../DATA/SimLex-999.txt"
     mon_fichier = open(CSVFile, "r")
     global contenu
@@ -179,19 +206,23 @@ def insert_file_simlex999():
 #
 #     laligne = 0
 #     for ligne in contenu_ligne:
-#         if ligne != '':
-#             ligne_split = ligne.split(",")
-#             matrice[laligne, 0] = ligne_split[2]
-#             matrice[laligne, 1] = ligne_split[3]
-#             matrice[laligne, 2] = ligne_split[0]
-#             x = float(matrice[laligne, 2])
-#             x = x / 1600
-#             matrice[laligne, 2] = str(x)
-#             laligne = laligne + 1
+#      if ligne != '':
+#          ligne_split = ligne.split(",")
+#          matrice[laligne, 0] = ligne_split[2]
+#          matrice[laligne, 1] = ligne_split[3]
+#          matrice[laligne, 2] = ligne_split[0]
+#          x = float(matrice[laligne, 2])
+#          x = x / 1600
+#          matrice[laligne, 2] = str(x)
+#          laligne = laligne + 1
 #     return matrice
 
 
 def insert_file_wordsim():
+    """
+        Cette fonction à pour but l'insertion et la transformation en matrice du fichier WordSim
+        :return: Une matrice de 3 colonnes (Mot 1, Mot 2, coef de correlation entre 0 et 1)
+        """
     chemin = "../DATA/wordsim.csv"
     mon_fichier = open(chemin, "r")
     global contenu
@@ -218,6 +249,11 @@ def insert_file_wordsim():
 
 
 def insert_file_generic(chemin):
+    """
+    Cette fonction à pour but l'insertion et la transformation d'un fichier générique de format (Mot 1, Mot 2, coef de correlation entre 0 et 1)
+    :param chemin: Chemin d'une fichier d'entrée
+    :return: Une matrice de 3 colonnes (Mot 1, Mot 2, coef de correlation entre 0 et 1)
+    """
     mon_fichier = open(chemin, "r")
     global contenu
     contenu = mon_fichier.read()
