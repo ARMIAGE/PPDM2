@@ -14,7 +14,7 @@ parser.add_argument("--mturk", help="Similary test for mturk 771 file", action="
 parser.add_argument("--mc", help="Similarity test for mc file", action="store_true")
 parser.add_argument("--rel", help="Similarity test for rel122 norms file", action="store_true")
 parser.add_argument("--simlex", help="Similarity test for simlex 999 file", action="store_true")
-parser.add_argument("--umnsrs", help="Similarity test for umnsrs file", action="store_true")
+# parser.add_argument("--umnrs", help="Similarity test for umnsrs file", action="store_true")
 parser.add_argument("--wordsim", help="Similarity test for wordsim file", action="store_true")
 args = parser.parse_args()
 
@@ -37,8 +37,8 @@ elif args.rel:
     print(similarity.similarite(model, file_insertion.insert_file_rel122()))
 elif args.simlex:
     print(similarity.similarite(model, file_insertion.insert_file_simlex999()))
-elif args.umnsrs:
-    print(similarity.similarite(model, file_insertion.insert_file_UMNRS_similarity()))
+# elif args.umnsrs:
+#    print(similarity.similarite(model, file_insertion.insert_file_UMNRS_similarity()))
 elif args.wordsim:
     print(similarity.similarite(model, file_insertion.insert_file_wordsim()))
 
