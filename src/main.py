@@ -1,3 +1,5 @@
+import warnings
+warnings.filterwarnings(action='ignore', category=UserWarning, module='gensim')
 from gensim.models import word2vec
 import file_insertion
 import similarity
