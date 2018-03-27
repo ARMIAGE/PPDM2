@@ -20,27 +20,51 @@ args = parser.parse_args()
 
 warnings.filterwarnings('ignore', '.*nan.*',)
 
-model = word2vec.Word2Vec.load('../MODEL/W2V_text8_Model.bin')
+try:
+    model = word2vec.Word2Vec.load('../MODEL/W2V_text8_Model.bin')
+except:
+    print("Erreur lors de la récupération du Model TEXT8")
 
 
-print("Le coefficient de qualité du fichier (%)")
+print("Calcul du coefficient de qualité du fichier (%) : ")
 
 if args.rg:
-    print(similarity.similarite(model, file_insertion.insert_file_rg()))
+    try:
+        print(similarity.similarite(model, file_insertion.insert_file_rg()))
+    except:
+        print("Erreur lors de l'execution du script de similarité")
 elif args.cos_matrix:
-    print(similarity.similarite(model, file_insertion.insert_file_cos_matrix_brm_ifr()))
+    try:
+        print(similarity.similarite(model, file_insertion.insert_file_cos_matrix_brm_ifr()))
+    except:
+        print("Erreur lors de l'execution du script de similarité")
 elif args.mturk:
-    print(similarity.similarite(model, file_insertion.insert_file_mturk771()))
+    try:
+        print(similarity.similarite(model, file_insertion.insert_file_mturk771()))
+    except:
+        print("Erreur lors de l'execution du script de similarité")
 elif args.mc:
-    print(similarity.similarite(model, file_insertion.insert_file_mc()))
+    try:
+        print(similarity.similarite(model, file_insertion.insert_file_mc()))
+    except:
+        print("Erreur lors de l'execution du script de similarité")
 elif args.rel:
-    print(similarity.similarite(model, file_insertion.insert_file_rel122()))
+    try:
+        print(similarity.similarite(model, file_insertion.insert_file_rel122()))
+    except:
+        print("Erreur lors de l'execution du script de similarité")
 elif args.simlex:
-    print(similarity.similarite(model, file_insertion.insert_file_simlex999()))
+    try:
+        print(similarity.similarite(model, file_insertion.insert_file_simlex999()))
+    except:
+        print("Erreur lors de l'execution du script de similarité")
 # elif args.umnsrs:
 #    print(similarity.similarite(model, file_insertion.insert_file_UMNRS_similarity()))
 elif args.wordsim:
-    print(similarity.similarite(model, file_insertion.insert_file_wordsim()))
+    try:
+        print(similarity.similarite(model, file_insertion.insert_file_wordsim()))
+    except:
+        print("Erreur lors de l'execution du script de similarité")
 
 #ANALOGIE
 #accuracy = model.accuracy('../DATA/questions-words.txt')

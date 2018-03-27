@@ -4,42 +4,31 @@
 {% include 'header.html' %}
 
   <main class="mdl-layout__content">
-      <H4><i class="material-icons">insert_drive_file</i> Choix du fichier</H4>
     <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
       <div class="page-content">
-           <form name="FilesSelection" action="resultat" method="GET" ng-controller="FormCtrl" ng-submit="submitForm()">
-        <ul class="demo-list-control mdl-list">
-        {% for fichier in typeFichier %}
-            <li class="mdl-list__item">
-            <span class="mdl-list__item-primary-content">
-                {{ fichier }}
-            </span>
-            <span class="mdl-list__item-secondary-action">
-                <label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect">
-                <input type="radio" id="list-option-1" class="mdl-radio__button"  ng-model="button.value" name="file" value="{{ fichier }}"/>
-            </label>
-            </span>
-            </li>
-        {% endfor %}
-        </ul>
-
           <div class="mdl-grid">
             <div class="mdl-layout-spacer"></div>
               <div class="mdl-cell mdl-cell--2-col">
+                  <!--<H5><i class="material-icons md-10">insert_drive_file</i> Choix du fichier</H5>-->
+                  <form name="FilesSelection" action="resultat" method="GET" onsubmit="return validateForm()" ng-controller="FormCtrl" ng-submit="submitForm()">
+                      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height">
+                        <input type="text" value="" class="mdl-textfield__input" readonly>
+                        <input type="hidden" value="" name="file">
+                        <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+                        <label for="file" class="mdl-textfield__label">Fichier</label>
+                        <ul for="file" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                            {% for fichier in typeFichier %}
+                            <li class="mdl-menu__item" data-val="{{ fichier }}">{{ fichier }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                      <BR/><BR/>
                 <input class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit" value="Valider">
               </div>
             <div class="mdl-layout-spacer"></div>
               </form>
         </div>
 
-        <!--Réponse de la fonction : {{ rep }}-->
-      </div>
-    </section>
-    <section class="mdl-layout__tab-panel" id="fixed-tab-2">
-      <div class="page-content"><!-- Your content goes here --></div>
-    </section>
-    <section class="mdl-layout__tab-panel" id="fixed-tab-3">
-      <div class="page-content"><!-- Your content goes here --></div>
-    </section>
+  </section>
   </main>
-</div>
+</HTML>
