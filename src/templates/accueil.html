@@ -4,29 +4,31 @@
 {% include 'header.html' %}
 
   <main class="mdl-layout__content">
+      <title>PPD - Similarité</title>
     <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
       <div class="page-content">
           <div class="mdl-grid">
             <div class="mdl-layout-spacer"></div>
-              <div class="mdl-cell mdl-cell--2-col">
+              <div class="mdl-cell mdl-cell--8-col">
                   <!--<H5><i class="material-icons md-10">insert_drive_file</i> Choix du fichier</H5>-->
                   <form name="FilesSelection" action="resultat" method="GET" onsubmit="return validateForm()" ng-controller="FormCtrl" ng-submit="submitForm()">
                       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height">
                         <input type="text" value="" class="mdl-textfield__input" readonly>
                         <input type="hidden" value="" name="file">
                         <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
-                        <label for="file" class="mdl-textfield__label">Fichier</label>
+                        <label for="file" class="mdl-textfield__label">Fichier de base</label>
                         <ul for="file" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
                             {% for fichier in typeFichier %}
                             <li class="mdl-menu__item" data-val="{{ fichier }}">{{ fichier }}</li>
                             {% endfor %}
                         </ul>
                     </div>
-                      <BR/><BR/>
-                <input class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit" value="Valider">
+                  </form>
+                  <input class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit" value="Valider">
+                  <BR/><BR/>
+                  <a href="s_upload">Vous pouvez aussi upload votre fichier</a>
               </div>
             <div class="mdl-layout-spacer"></div>
-              </form>
         </div>
 
   </section>
