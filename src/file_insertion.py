@@ -250,16 +250,16 @@ def insert_file_wordsim():
 
 def insert_file_generic(chemin):
     """
-    Cette fonction à pour but l'insertion et la transformation d'un fichier générique de format (Mot 1, Mot 2, coef de correlation entre 0 et 1)
+    Cette fonction à pour but l'insertion et la transformation d'un fichier générique de format (Mot 1; Mot 2; coef de correlation entre 0 et 1)
     :param chemin: Chemin d'une fichier d'entrée
-    :return: Une matrice de 3 colonnes (Mot 1, Mot 2, coef de correlation entre 0 et 1)
+    :return: Une matrice de 3 colonnes (Mot 1; Mot 2; coef de correlation entre 0 et 1)
     """
     mon_fichier = open(chemin, "r")
     global contenu
     contenu = mon_fichier.read()
     mon_fichier.close()
     contenu_ligne = contenu.split('\n')
-    nb_lines = len(contenu_ligne) - 2
+    nb_lines = len(contenu_ligne)
     a = np.zeros(shape=(nb_lines, 3))
     b = np.array(a, dtype=str)
     matrice = np.empty_like(b)

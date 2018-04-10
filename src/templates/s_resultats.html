@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<HTML>
+
+{% include 'header.html' %}
+
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs">
+  <header class="mdl-color--teal-500 mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout-title">{{ titre }}</span>
+    </div>
+    <div class="mdl-color--teal-600 mdl-layout__tab-bar mdl-js-ripple-effect">
+      <a href="/" class="mdl-layout__tab is-active">Similarité</a>
+      <a href="/a" class="mdl-layout__tab">Analogie</a>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Menu</span>
+      <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="/">Acceuil</a>
+          <a class="mdl-navigation__link" href="/">Notre projet</a>
+      </nav>
+  </div>
+  <main class="mdl-layout__content">
+      <title>PPD - Résultat</title>
+     <div class="mdl-layout__tab-panel is-active" id="overview">
+
+       <div class="demo-grid-2 mdl-grid">
+        <div class="mdl-cell mdl-cell--6-col">
+          <H4>Le fichier {{File}} a été traité avec succès !</H4>
+          <H5>Le coefficient de qualité est de {{resultat}}</H5>
+        </div>
+      </div>
+
+     </div>
+  </main>
+
+</HTML>

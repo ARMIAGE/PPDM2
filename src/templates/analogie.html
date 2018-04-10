@@ -9,8 +9,8 @@
       <span class="mdl-layout-title">{{ titre }}</span>
     </div>
     <div class="mdl-color--teal-600 mdl-layout__tab-bar mdl-js-ripple-effect">
-      <a href="/" class="mdl-layout__tab is-active">Similarité</a>
-      <a href="/a" class="mdl-layout__tab">Analogie</a>
+      <a href="/" class="mdl-layout__tab">Similarité</a>
+      <a href="/a" class="mdl-layout__tab is-active">Analogie</a>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -29,23 +29,21 @@
             <div class="mdl-layout-spacer"></div>
               <div class="mdl-cell mdl-cell--8-col">
                   <!--<H5><i class="material-icons md-10">insert_drive_file</i> Choix du fichier</H5>-->
-                  <form name="FilesSelection" action="/s/resultat" method="GET" onsubmit="return validateForm()" ng-controller="FormCtrl" ng-submit="submitForm()">
+                  <form name="FilesSelection" action="/a/resultat" method="GET" onsubmit="return validateForm()" ng-controller="FormCtrl" ng-submit="submitForm()">
                       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height">
                         <input type="text" value="" class="mdl-textfield__input" readonly>
                         <input type="hidden" value="" name="file">
                         <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
-                        <label for="file" class="mdl-textfield__label">Fichier de base</label>
+                        <label for="file" class="mdl-textfield__label">Fichier de question</label>
                         <ul for="file" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
-                            {% for fichier in typeFichier %}
-                            <li class="mdl-menu__item" data-val="{{ fichier }}">{{ fichier }}</li>
+                            {% for file in files %}
+                            <li class="mdl-menu__item" data-val="{{ file }}">{{ file }}</li>
                             {% endfor %}
                         </ul>
                     </div>
                       <BR/><BR/>
                       <input class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" type="submit" value="Valider">
                   </form>
-                  <BR/><BR/>
-                  <a href="/s/upload">Vous pouvez aussi upload votre fichier</a>
               </div>
             <div class="mdl-layout-spacer"></div>
         </div>
