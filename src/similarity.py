@@ -1,7 +1,12 @@
 import fonctions_utiles
 
 def similarite(model, matrice):
-    
+    """
+        Cette fonction réalise l'enchaînement des fonctions permettant d'obtenir le coefficent de similarité d'un modèle de données
+        :param model: modèle de données text8 récupéré à partir de wikipedia anglais
+        :param matrice: jeu de données analysé, rendu sous forme de matrice
+        :return: Retourne le coefficent de similarité entre le modèle text8 et le jeu de données sous forme de matrice fourni en entrée
+    """
     #Verification de l'existence des mots dans le model
     matrice_clear = fonctions_utiles.liste_de_mots_contenus(model, matrice)
 
