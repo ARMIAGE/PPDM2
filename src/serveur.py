@@ -67,13 +67,13 @@ def s_resultat():
 
 @app.route('/a')
 def a_accueil():
-    files = ["Question Words (Google)"]
+    files = ["Questions Words (Google)"]
     return render_template('analogie.html', files=files)
 
 @app.route('/a/resultat')
 def a_resultat():
     File = request.args.get('file')
-    if File == "Question Words (Google)":
+    if File == "Questions Words (Google)":
         accuracy = model.accuracy('../DATA/questions-words.txt')
         sum_corr = len(accuracy[-1]['correct'])
         sum_incorr = len((accuracy[-1]['incorrect']))
