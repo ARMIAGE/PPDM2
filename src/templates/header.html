@@ -7,21 +7,3 @@
 <script defer src="{{ url_for('static', filename='material.min.js') }}"></script>
 <script defer src="{{ url_for('static', filename='mdl-select.min.js') }}"></script>
 <script defer src="{{ url_for('static', filename='functions.js') }}"></script>
-
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs">
-  <header class="mdl-color--teal-500 mdl-layout__header">
-    <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">{{ titre }}</span>
-    </div>
-    <div class="mdl-color--teal-600 mdl-layout__tab-bar mdl-js-ripple-effect">
-      <a href="/" class="mdl-layout__tab is-active">Similarité</a>
-      <a href="/" class="mdl-layout__tab">Analogie</a>
-    </div>
-  </header>
-  <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">Menu</span>
-      <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="/">Acceuil</a>
-          <a class="mdl-navigation__link" href="/">Notre projet</a>
-      </nav>
-  </div>
