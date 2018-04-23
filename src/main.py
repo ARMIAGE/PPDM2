@@ -5,6 +5,7 @@ import file_insertion
 import similarity
 import warnings
 import argparse
+import analogie
 
 #Similarity arguments
 parser = argparse.ArgumentParser()
@@ -16,6 +17,9 @@ parser.add_argument("--rel", help="Similarity test for rel122 norms file", actio
 parser.add_argument("--simlex", help="Similarity test for simlex 999 file", action="store_true")
 # parser.add_argument("--umnrs", help="Similarity test for umnsrs file", action="store_true")
 parser.add_argument("--wordsim", help="Similarity test for wordsim file", action="store_true")
+
+parser.add_argument("--analogie", help="Analogie with Questions Words (Google) on Text8 Model", action="store_true")
+
 args = parser.parse_args()
 
 warnings.filterwarnings('ignore', '.*nan.*',)
@@ -25,8 +29,7 @@ try:
 except:
     print("Erreur lors de la récupération du Model TEXT8")
 
-
-print("Calcul du coefficient de qualité du fichier (%) : ")
+print("Calcul du coefficient de qualité du fichier...")
 
 if args.rg:
     try:
@@ -58,6 +61,11 @@ elif args.simlex:
         print(similarity.similarite(model, file_insertion.insert_file_simlex999()))
     except:
         print("Erreur lors de l'execution du script de similarité")
+elif args.analogie:
+    try:
+        analogie.analogie_GoogleQuestionWords(model)
+    except:
+        print("Erreur lors de l'execution du script d'analogie")
 # elif args.umnsrs:
 #    print(similarity.similarite(model, file_insertion.insert_file_UMNRS_similarity()))
 elif args.wordsim:
@@ -67,11 +75,4 @@ elif args.wordsim:
         print("Erreur lors de l'execution du script de similarité")
 
 #ANALOGIE
-accuracy = model.accuracy('../DATA/questions-words.txt')
-sum_corr = len(accuracy[-1]['correct'])
-sum_incorr = len((accuracy[-1]['incorrect']))
-total = sum_corr + sum_incorr
-percent = lambda a: a / total * 100
-print(accuracy[-1]['correct'])
-print(accuracy[-1]['incorrect'])
-print('Nombre de phrases: {}, Correctes: {:.2f}%, Incorrectes: {:.2f}%'.format(total, percent(sum_corr), percent(sum_incorr)))
+
