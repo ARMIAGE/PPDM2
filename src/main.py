@@ -63,7 +63,7 @@ elif args.simlex:
         print("Erreur lors de l'execution du script de similarité")
 elif args.analogie:
     try:
-        analogie.analogie_GoogleQuestionWords(model)
+        analogie.analogie_QuestionsWords(model)
     except:
         print("Erreur lors de l'execution du script d'analogie")
 # elif args.umnsrs:
