@@ -10,6 +10,8 @@ Welcome to Word Embeddings's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+.. automodule:: file_insertion
+
 .. autofunction:: file_insertion.insert_file_mc
 
 
