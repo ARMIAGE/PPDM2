@@ -1,4 +1,4 @@
-def analogie_QuestionWords(model):
+def analogie_QuestionsWords(model):
     accuracy = model.accuracy('../DATA/questions-words.txt')
     sum_corr = len(accuracy[-1]['correct'])
     sum_incorr = len((accuracy[-1]['incorrect']))
