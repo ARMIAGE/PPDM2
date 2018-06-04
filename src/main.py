@@ -25,7 +25,7 @@ args = parser.parse_args()
 warnings.filterwarnings('ignore', '.*nan.*',)
 
 try:
-    model = word2vec.Word2Vec.load('../MODEL/W2V_text8_Model.bin')
+    model = word2vec.Word2Vec.load('MODEL/W2V_text8_Model.bin')
 except:
     print("Erreur lors de la récupération du Model TEXT8")
 

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>FONCTIONS UTILES &mdash; Documentation Word Embeddings 0.1</title>
+  <title>FONCTIONS UTILES &mdash; documentation Word Embeddings 0.1</title>
   
 
   
@@ -83,6 +83,10 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">FONCTIONS UTILES</a></li>
 <li class="toctree-l1"><a class="reference internal" href="file_insertion.html">FONCTIONS D’INSERTION</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analogie.html">Calcul de l’analogie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="similarite.html">Calcul de la similarité</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modele.html">Utilisation du modèle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="serveur.html">Serveur</a></li>
 </ul>
 
             
@@ -159,7 +163,7 @@
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><strong>matrice</strong> – matrice à trier</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Renvoie:</th><td class="field-body">matrice triée dans l’ordre alphabétique sur les deux colonnes mots</td>
+<tr class="field-even field"><th class="field-name">Retourne:</th><td class="field-body">matrice triée dans l’ordre alphabétique sur les deux colonnes mots</td>
 </tr>
 </tbody>
 </table>
@@ -179,7 +183,7 @@
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Renvoie:</th><td class="field-body"><p class="first last">matrice 3 colonnes avec nos deux mots et la similarité calculée</p>
+<tr class="field-even field"><th class="field-name">Retourne:</th><td class="field-body"><p class="first last">matrice 3 colonnes avec nos deux mots et la similarité calculée</p>
 </td>
 </tr>
 </tbody>
@@ -196,7 +200,7 @@
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><strong>matrice</strong> – matrice trois colonnes : mot1, mot2, similarité</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Renvoie:</th><td class="field-body">liste de mots</td>
+<tr class="field-even field"><th class="field-name">Retourne:</th><td class="field-body">liste de mots</td>
 </tr>
 </tbody>
 </table>
@@ -216,7 +220,7 @@
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Renvoie:</th><td class="field-body"><p class="first last">Vrai si le mot est dans le modèle et faux sinon</p>
+<tr class="field-even field"><th class="field-name">Retourne:</th><td class="field-body"><p class="first last">Vrai si le mot est dans le modèle et faux sinon</p>
 </td>
 </tr>
 </tbody>
@@ -238,7 +242,7 @@
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><strong>matrice</strong> – matrice mot1, mot2 et troisième colonne vide.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Renvoie:</th><td class="field-body">matrice mot1, mot2, rang</td>
+<tr class="field-even field"><th class="field-name">Retourne:</th><td class="field-body">matrice mot1, mot2, rang</td>
 </tr>
 </tbody>
 </table>
@@ -254,7 +258,7 @@
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><strong>matrice</strong> – matrice à trier</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Renvoie:</th><td class="field-body">matrice triée</td>
+<tr class="field-even field"><th class="field-name">Retourne:</th><td class="field-body">matrice triée</td>
 </tr>
 </tbody>
 </table>
@@ -270,7 +274,7 @@
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><strong>matrice</strong> – matrice mot1, mot2, rang</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Renvoie:</th><td class="field-body">Colonne des rang</td>
+<tr class="field-even field"><th class="field-name">Retourne:</th><td class="field-body">Colonne des rang</td>
 </tr>
 </tbody>
 </table>
@@ -290,7 +294,7 @@
 </ul>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Renvoie:</th><td class="field-body"><p class="first last">Corrélation entre les deux rangs</p>
+<tr class="field-even field"><th class="field-name">Retourne:</th><td class="field-body"><p class="first last">Corrélation entre les deux rangs</p>
 </td>
 </tr>
 </tbody>
@@ -363,9 +367,7 @@
 
   <script type="text/javascript">
       jQuery(function () {
-          
-          SphinxRtdTheme.Navigation.enableSticky();
-          
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script> 
 
