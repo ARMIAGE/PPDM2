@@ -6,6 +6,7 @@ import numpy as np
 def insert_file_cos_matrix_brm_ifr():
     """
     Cette fonction à pour but l'insertion et la transformation en matrice du fichier Cos Matrix
+
     :return: Une matrice de 3 colonnes (Mot 1, Mot 2, coef de correlation entre 0 et 1)
     """
     # recuperation des donnees de chaque onglet
@@ -31,6 +32,7 @@ def insert_file_cos_matrix_brm_ifr():
 def insert_file_mc():
     """
         Cette fonction à pour but l'insertion et la transformation en matrice du fichier Mc
+
         :return: Une matrice de 3 colonnes (Mot 1, Mot 2, coef de correlation entre 0 et 1)
         """
     chemin = path = "../DATA/mc.csv"
@@ -61,6 +63,7 @@ def insert_file_mc():
 def insert_file_mturk771():
     """
         Cette fonction à pour but l'insertion et la transformation en matrice du fichier Mturk771
+
         :return: Une matrice de 3 colonnes (Mot 1, Mot 2, coef de correlation entre 0 et 1)
         """
     path = "../DATA/MTURK-771.csv"
@@ -89,6 +92,7 @@ def insert_file_mturk771():
 def insert_file_rel122():
     """
         Cette fonction à pour but l'insertion et la transformation en matrice du fichier Rel122
+
         :return: Une matrice de 3 colonnes (Mot 1, Mot 2, coef de correlation entre 0 et 1)
         """
     chemin = "../DATA/rel122-norms.txt"
@@ -119,6 +123,7 @@ def insert_file_rel122():
 def insert_file_rg():
     """
         Cette fonction à pour but l'insertion et la transformation en matrice du fichier Rg
+
         :return: Une matrice de 3 colonnes (Mot 1, Mot 2, coef de correlation entre 0 et 1)
         """
     path = "../DATA/rg.csv"
@@ -162,6 +167,7 @@ def insert_file_rg():
 def insert_file_simlex999():
     """
         Cette fonction à pour but l'insertion et la transformation en matrice du fichier Simlex199
+
         :return: Une matrice de 3 colonnes (Mot 1, Mot 2, coef de correlation entre 0 et 1)
         """
     CSVFile = "../DATA/SimLex-999.txt"
@@ -221,6 +227,7 @@ def insert_file_simlex999():
 def insert_file_wordsim():
     """
         Cette fonction à pour but l'insertion et la transformation en matrice du fichier WordSim
+
         :return: Une matrice de 3 colonnes (Mot 1, Mot 2, coef de correlation entre 0 et 1)
         """
     chemin = "../DATA/wordsim.csv"
@@ -251,6 +258,7 @@ def insert_file_wordsim():
 def insert_file_generic(chemin):
     """
     Cette fonction à pour but l'insertion et la transformation d'un fichier générique de format (Mot 1; Mot 2; coef de correlation entre 0 et 1)
+
     :param chemin: Chemin d'une fichier d'entrée
     :return: Une matrice de 3 colonnes (Mot 1; Mot 2; coef de correlation entre 0 et 1)
     """
