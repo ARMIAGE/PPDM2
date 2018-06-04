@@ -10,9 +10,14 @@ Welcome to Word Embeddings's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-.. automodule:: file_insertion
+   fonctions_utiles
+   file_insertion 
+   analogie
+   similarite
+   modele
+   serveur
 
-.. autofunction:: file_insertion.insert_file_mc
+
 
 
 Indices and tables

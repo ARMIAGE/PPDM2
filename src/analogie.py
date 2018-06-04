@@ -1,6 +1,7 @@
 def analogie_QuestionsWords(model):
     """
     Cette fonction a pour but l'insertion et la transformation en matrice du fichier Questions Words
+
     :return: Une matrice de 3 colonnes (Mot 1, Mot 2, coef de correlation entre 0 et 1)
     """
     accuracy = model.accuracy('../DATA/questions-words.txt')

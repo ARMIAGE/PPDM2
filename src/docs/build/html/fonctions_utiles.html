@@ -1,0 +1,373 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="fr" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="fr" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>FONCTIONS UTILES &mdash; Documentation Word Embeddings 0.1</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Recherche" href="search.html" />
+    <link rel="next" title="FONCTIONS D’INSERTION" href="file_insertion.html" />
+    <link rel="prev" title="Welcome to Word Embeddings’s documentation!" href="index.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Word Embeddings
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">FONCTIONS UTILES</a></li>
+<li class="toctree-l1"><a class="reference internal" href="file_insertion.html">FONCTIONS D’INSERTION</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Word Embeddings</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>FONCTIONS UTILES</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/fonctions_utiles.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-fonctions_utiles">
+<span id="fonctions-utiles"></span><h1>FONCTIONS UTILES<a class="headerlink" href="#module-fonctions_utiles" title="Lien permanent vers ce titre">¶</a></h1>
+<dl class="function">
+<dt id="fonctions_utiles.tri_matrice">
+<code class="descclassname">fonctions_utiles.</code><code class="descname">tri_matrice</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fonctions_utiles.tri_matrice" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Cette fonction a pour but de trier la matrice dans l’ordre alphabétique.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><strong>matrice</strong> – matrice à trier</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Renvoie:</th><td class="field-body">matrice triée dans l’ordre alphabétique sur les deux colonnes mots</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="fonctions_utiles.calcul_similarite">
+<code class="descclassname">fonctions_utiles.</code><code class="descname">calcul_similarite</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fonctions_utiles.calcul_similarite" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Cette fonction a pour but de calculer la similarité entre deux mots à partir d’un modèle précalculé</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>model</strong> – modèle précalculé de wor2vec utilisant un corpus de mots provenant du Wikipedia anglais</li>
+<li><strong>liste_mots</strong> – matrice trois colonnes dont les deux premières colonnes sont remplies par une liste de mot dont on veut calculer la similarité.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Renvoie:</th><td class="field-body"><p class="first last">matrice 3 colonnes avec nos deux mots et la similarité calculée</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="fonctions_utiles.extract_liste_de_mots">
+<code class="descclassname">fonctions_utiles.</code><code class="descname">extract_liste_de_mots</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fonctions_utiles.extract_liste_de_mots" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Fonction d’extraction de la liste de mot à partir d’une matrice de similarité</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><strong>matrice</strong> – matrice trois colonnes : mot1, mot2, similarité</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Renvoie:</th><td class="field-body">liste de mots</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="fonctions_utiles.est_dans_le_model">
+<code class="descclassname">fonctions_utiles.</code><code class="descname">est_dans_le_model</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fonctions_utiles.est_dans_le_model" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Fonction ayant pour but de savoir si le mot donné en entrée est présent dans le modèle.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>word_vectors</strong> – Vecteur contenant tout les mots du modèle</li>
+<li><strong>mot</strong> – Mot à analyser</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Renvoie:</th><td class="field-body"><p class="first last">Vrai si le mot est dans le modèle et faux sinon</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="fonctions_utiles.liste_de_mots_contenus">
+<code class="descclassname">fonctions_utiles.</code><code class="descname">liste_de_mots_contenus</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fonctions_utiles.liste_de_mots_contenus" title="Lien permanent vers cette définition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="fonctions_utiles.ajouter_colonne_rang">
+<code class="descclassname">fonctions_utiles.</code><code class="descname">ajouter_colonne_rang</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fonctions_utiles.ajouter_colonne_rang" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Cette fonction permet de remplir la troisième colonne avec le rang du couple de mots</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><strong>matrice</strong> – matrice mot1, mot2 et troisième colonne vide.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Renvoie:</th><td class="field-body">matrice mot1, mot2, rang</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="fonctions_utiles.tri_alphabetique">
+<code class="descclassname">fonctions_utiles.</code><code class="descname">tri_alphabetique</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fonctions_utiles.tri_alphabetique" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Fonction de tri_alphabétique</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><strong>matrice</strong> – matrice à trier</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Renvoie:</th><td class="field-body">matrice triée</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="fonctions_utiles.get_rang">
+<code class="descclassname">fonctions_utiles.</code><code class="descname">get_rang</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fonctions_utiles.get_rang" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Fonbction permettant de récupérer le rang</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><strong>matrice</strong> – matrice mot1, mot2, rang</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Renvoie:</th><td class="field-body">Colonne des rang</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="fonctions_utiles.calcul_corellation">
+<code class="descclassname">fonctions_utiles.</code><code class="descname">calcul_corellation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fonctions_utiles.calcul_corellation" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Cette fonction permet de calculer la corrélation à partir des rangs</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><ul class="first simple">
+<li><strong>rang_humain</strong> – rang provenant du modèle humain</li>
+<li><strong>rang_word2vec</strong> – rang provenant du modèle informatique</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Renvoie:</th><td class="field-body"><p class="first last">Corrélation entre les deux rangs</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="file_insertion.html" class="btn btn-neutral float-right" title="FONCTIONS D’INSERTION" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Welcome to Word Embeddings’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Alexis Colonna, Alex Veynand, Alexandre Rosselin.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1',
+            LANGUAGE:'fr',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script> 
+
+</body>
+</html>

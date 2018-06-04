@@ -9,6 +9,7 @@ logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=lo
 def initModel():
     """
     Cette fonction permet d'initialiser le modèle text8 et de persister le modèle sur le disque dans un fichier .bin
+s
     :return: Retourne le modèle de données text8
     """
     sentences = word2vec.Text8Corpus("../DATA/text8")

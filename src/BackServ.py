@@ -27,6 +27,7 @@ model = word2vec.Word2Vec.load('../MODEL/W2V_text8_Model.bin')
 def titre():
     """
     Cette fonction a pour but d'afficher un titre pour l'interface web de l'application
+
     :return: Un titre du dictionnaire de données dict
     """
     return dict(titre="Word Embedding Application")
@@ -35,6 +36,7 @@ def titre():
 def accueil():
     """
     Cette fonction liste dans l'accueil les fichiers sur lesquels on peut effectuer les tests de similarité
+
     :return: La liste des noms des fichiers sources pour les tests de similarité
     """
     typeFichier = ["MC", "MTURK-771", "rel122-norms", "RG", "SimLex-999", "WordSim", "Cos Matrix BRM IFR"]
@@ -44,6 +46,7 @@ def accueil():
 def s_upload():
     """
     Cette fonction permet de charger un fichier .txt ou .csv format Mot1, Mot2, corrélation afin d'effectuer les tests pour déterminer un coefficient de similarité
+
     :return: Le coefficent de corrélation correspondant au fichier donné en entrée
     """
     if request.method == 'POST':
@@ -60,6 +63,7 @@ def s_upload():
 def s_resultat():
     """
     Cette fonction donne le résultat de similarité pour les fichiers déjà chargés sur l'interface web
+
     :return: Le coefficent de corrélation correspondant au fichier sur lequel on clique sur l'interface web
     """
     File = request.args.get('file')
@@ -85,6 +89,7 @@ def s_resultat():
 def a_accueil():
     """
     Cette fonction liste dans l'accueil les fichiers sur lesquels on peut effectuer les tests d'analogie
+
     :return: La liste des noms des fichiers sources pour les tests d'analogie
     """
     files = ["Questions Words (Google)"]
@@ -94,6 +99,7 @@ def a_accueil():
 def a_resultat():
     """
     Cette fonction donne le résultat d'analogie pour les fichiers déjà chargés sur l'interface web
+
     :return: Le coefficent de corrélation correspondant au fichier sur lequel on clique sur l'interface web
     """
     File = request.args.get('file')
@@ -115,9 +121,10 @@ def a_resultat():
 def ma_page_404(error):
     """
     Cette fonction permet de traiter l'erreur 404 lorsqu'une page n'est pas trouvée
+
     :return: Une page web erreur 404
     """
     return "Page non trouvée. Erreur ", 404
 
-if __name__ == '__main__':
+if __name__ == '__main__':s
     app.run(debug=True)

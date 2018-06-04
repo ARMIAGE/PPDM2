@@ -6,6 +6,7 @@ import scipy
 def tri_matrice(matrice):
     """
     Cette fonction a pour but de trier la matrice dans l'ordre alphabétique.
+
     :param matrice: matrice à trier
     :return: matrice triée dans l'ordre alphabétique sur les deux colonnes mots
     """
@@ -15,11 +16,12 @@ def tri_matrice(matrice):
 def calcul_similarite(model, liste_mots):
     """
     Cette fonction a pour but de calculer la similarité entre deux mots à partir d'un modèle précalculé
+
     :param model: modèle précalculé de wor2vec utilisant un corpus de mots provenant du Wikipedia anglais
-    :param liste_mots: matrice trois colonnes dont les deux premières colonnes sont remplies par une liste de mot dont
-     on veut calculer la similarité.
-    :return:
+    :param liste_mots: matrice trois colonnes dont les deux premières colonnes sont remplies par une liste de mot dont on veut calculer la similarité.
+    :return: matrice 3 colonnes avec nos deux mots et la similarité calculée
     """
+
     a = np.zeros(shape=(len(liste_mots), 3))
     b = np.array(a, dtype=str)
     matrice = np.empty_like(b)
@@ -48,6 +50,7 @@ def calcul_similarite(model, liste_mots):
 def extract_liste_de_mots(matrice):
     """
     Fonction d'extraction de la liste de mot à partir d'une matrice de similarité
+
     :param matrice: matrice trois colonnes : mot1, mot2, similarité
     :return: liste de mots
     """
@@ -57,6 +60,7 @@ def extract_liste_de_mots(matrice):
 def est_dans_le_model(word_vectors, mot):
     """
     Fonction ayant pour but de savoir si le mot donné en entrée est présent dans le modèle.
+
     :param word_vectors: Vecteur contenant tout les mots du modèle
     :param mot: Mot à analyser
     :return: Vrai si le mot est dans le modèle et faux sinon
@@ -83,6 +87,7 @@ def liste_de_mots_contenus(model, data):
 def ajouter_colonne_rang(matrice):
     """
     Cette fonction permet de remplir la troisième colonne avec le rang du couple de mots
+
     :param matrice: matrice mot1, mot2 et troisième colonne vide.
     :return: matrice mot1, mot2, rang
     """
@@ -98,6 +103,7 @@ def ajouter_colonne_rang(matrice):
 def tri_alphabetique(matrice):
     """
     Fonction de tri_alphabétique
+
     :param matrice: matrice à trier
     :return: matrice triée
     """
@@ -108,6 +114,7 @@ def tri_alphabetique(matrice):
 def get_rang(matrice):
     """
     Fonbction permettant de récupérer le rang
+
     :param matrice: matrice mot1, mot2, rang
     :return: Colonne des rang
     """
@@ -117,6 +124,7 @@ def get_rang(matrice):
 def calcul_corellation(rang_humain, rang_word2vec):
     """
     Cette fonction permet de calculer la corrélation à partir des rangs
+
     :param rang_humain: rang provenant du modèle humain
     :param rang_word2vec: rang provenant du modèle informatique
     :return: Corrélation entre les deux rangs
