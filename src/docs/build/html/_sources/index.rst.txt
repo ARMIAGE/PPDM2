@@ -16,6 +16,7 @@ Welcome to Word Embeddings's documentation!
    similarite
    modele
    serveur
+   
 
 
 

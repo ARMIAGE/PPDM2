@@ -1,7 +1,7 @@
 Serveur
 =======================
 
-.. automodule:: serveur
+.. automodule:: BackServ
 
 .. autofunction:: titre()
 .. autofunction:: accueil()

@@ -126,5 +126,5 @@ def ma_page_404(error):
     """
     return "Page non trouvée. Erreur ", 404
 
-if __name__ == '__main__':s
+if __name__ == '__main__':
     app.run(debug=True)
