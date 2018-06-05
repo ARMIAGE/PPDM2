@@ -21,7 +21,7 @@ def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
 
-model = word2vec.Word2Vec.load('../MODEL/W2V_text8_Model.bin')
+model = word2vec.Word2Vec.load('MODEL/W2V_text8_Model.bin')
 
 @app.context_processor
 def titre():
