@@ -72,6 +72,13 @@ def est_dans_le_model(word_vectors, mot):
 
 
 def liste_de_mots_contenus(model, data):
+    """
+        Fonction permettant de nettoyer la matrice de base des mots non contenus dans le model.
+
+        :param model: Modèle de word embedings
+        :param data: Données en entrée à traiter
+        :return: Matrice de mot nettoyée
+        """
     word_vectors = model.wv
     l = 0
     for row in data:
