@@ -42,7 +42,8 @@ extensions = [
     'sphinx.ext.doctest',
     'sphinx.ext.coverage',
     'sphinx.ext.githubpages',
-    'sphinx.ext.autodoc'
+    'sphinx.ext.autodoc',
+    'rst2pdf.pdfbuilder'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -109,6 +110,7 @@ html_static_path = ['_static']
 #
 # html_sidebars = {}
 
+pdf_documents = [('index', u'rst2pdf', u'Sample rst2pdf doc', u'MIAGE'),]
 
 # -- Options for HTMLHelp output ---------------------------------------------
 
