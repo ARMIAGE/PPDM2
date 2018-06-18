@@ -1,6 +1,8 @@
 # PPDM2
 Word Embedding
 
+Langage : Python (Gensim, Numpy, Scipy, Flask) and HTML (Material Design for CSS)
+
 ------------------ PROJECT DESCRIPTION ------------------
 
 The objective of this project is to implement an application using artificial intelligence techniques to solve problems of similarity or analogy, using the technique of word embedding or word embeddings.
