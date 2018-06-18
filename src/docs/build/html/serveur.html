@@ -150,8 +150,106 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="serveur">
-<h1>Serveur<a class="headerlink" href="#serveur" title="Lien permanent vers ce titre">¶</a></h1>
+  <div class="section" id="module-BackServ">
+<span id="serveur"></span><h1>Serveur<a class="headerlink" href="#module-BackServ" title="Lien permanent vers ce titre">¶</a></h1>
+<dl class="function">
+<dt id="BackServ.titre">
+<code class="descclassname">BackServ.</code><code class="descname">titre</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BackServ.titre" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Cette fonction a pour but d’afficher un titre pour l’interface web de l’application</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Renvoie:</th><td class="field-body">Un titre du dictionnaire de données dict</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="BackServ.accueil">
+<code class="descclassname">BackServ.</code><code class="descname">accueil</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BackServ.accueil" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Cette fonction liste dans l’accueil les fichiers sur lesquels on peut effectuer les tests de similarité</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Renvoie:</th><td class="field-body">La liste des noms des fichiers sources pour les tests de similarité</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="BackServ.s_upload">
+<code class="descclassname">BackServ.</code><code class="descname">s_upload</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BackServ.s_upload" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Cette fonction permet de charger un fichier .txt ou .csv format Mot1, Mot2, corrélation afin d’effectuer les tests pour déterminer un coefficient de similarité</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Renvoie:</th><td class="field-body">Le coefficent de corrélation correspondant au fichier donné en entrée</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="BackServ.s_resultat">
+<code class="descclassname">BackServ.</code><code class="descname">s_resultat</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BackServ.s_resultat" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Cette fonction donne le résultat de similarité pour les fichiers déjà chargés sur l’interface web</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Renvoie:</th><td class="field-body">Le coefficent de corrélation correspondant au fichier sur lequel on clique sur l’interface web</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="BackServ.a_accueil">
+<code class="descclassname">BackServ.</code><code class="descname">a_accueil</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BackServ.a_accueil" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Cette fonction liste dans l’accueil les fichiers sur lesquels on peut effectuer les tests d’analogie</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Renvoie:</th><td class="field-body">La liste des noms des fichiers sources pour les tests d’analogie</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="BackServ.a_resultat">
+<code class="descclassname">BackServ.</code><code class="descname">a_resultat</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BackServ.a_resultat" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Cette fonction donne le résultat d’analogie pour les fichiers déjà chargés sur l’interface web</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Renvoie:</th><td class="field-body">Le coefficent de corrélation correspondant au fichier sur lequel on clique sur l’interface web</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="BackServ.ma_page_404">
+<code class="descclassname">BackServ.</code><code class="descname">ma_page_404</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BackServ.ma_page_404" title="Lien permanent vers cette définition">¶</a></dt>
+<dd><p>Cette fonction permet de traiter l’erreur 404 lorsqu’une page n’est pas trouvée</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Renvoie:</th><td class="field-body">Une page web erreur 404</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 </div>
 
 
