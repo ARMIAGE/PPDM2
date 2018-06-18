@@ -28,10 +28,103 @@
         <div class="mdl-cell mdl-cell--6-col">
           <H4>Le fichier {{File}} a été traité avec succès !</H4>
           <H5>Le coefficient de qualité est de {{resultat}}</H5>
-        </div>
+          <p>Ce résultat est calculé avec l'aglorithme de Kendall, plus le résultat est proche de 0, plus le fichier est de qualité.</p>
+           <div id="container" style="min-width: 310px; height: 400px; max-width: 800px; margin: 0 auto"></div>
+            </div>
       </div>
 
      </div>
   </main>
 
 </HTML>
+<SCRIPT>
+
+Highcharts.chart('container', {
+    chart: {
+        type: 'scatter',
+        zoomType: 'xy'
+    },
+    credits :{
+    enabled : false
+    },
+    title: {
+        text: 'Qualité du fichier'
+    },
+    subtitle: {
+        text: ''
+    },
+    xAxis: {
+        title: {
+            enabled: true,
+            text: ''
+        },
+        startOnTick: true,
+        endOnTick: true,
+        showLastLabel: true
+    },
+    yAxis: {
+        title: {
+            text: ''
+        }
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'left',
+        verticalAlign: 'top',
+        x: 100,
+        y: 70,
+        floating: true,
+        backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF',
+        borderWidth: 1
+    },
+    plotOptions: {
+        scatter: {
+            marker: {
+                radius: 5,
+                states: {
+                    hover: {
+                        enabled: true,
+                        lineColor: 'rgb(100,100,100)'
+                    }
+                }
+            },
+            states: {
+                hover: {
+                    marker: {
+                        enabled: false
+                    }
+                }
+            },
+            tooltip: {
+                headerFormat: '<b>{series.name}</b><br>',
+                pointFormat: '{point.x} cm, {point.y} kg'
+            }
+        }
+    },
+    series: [{
+        name: 'Qualité optimale',
+        color: '#00FFCB',
+        data: [[0, 0]]
+
+    },
+     {
+        name: 'Qualité médiocre',
+        color: '#FF0000',
+        data: [[-1, -1]]
+
+    },
+    {
+        name: 'Qualité médiocre',
+        color: '#FF0000',
+        data: [[1, 1]]
+
+    },
+    {
+        name: 'Fichier {{File}}',
+        color: 'rgba(119, 152, 191, .5)',
+        data: [[{{resultat}}, {{resultat}}]]
+    }]
+});
+
+
+</SCRIPT>
