@@ -1,7 +1,7 @@
 # PPDM2
 Word Embedding
 
-Langage : Python (Gensim, Numpy, Scipy, Flask) and HTML (Material Design for CSS)
+Langages : Python (Gensim, Numpy, Scipy, Flask) and HTML (Material Design for CSS)
 
 ------------------ PROJECT DESCRIPTION ------------------
 
