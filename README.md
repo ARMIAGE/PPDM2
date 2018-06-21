@@ -1,5 +1,5 @@
 # PPDM2
-## Word Embedding
+### Word Embedding
 
 ##### Langages : Python (Gensim, Numpy, Scipy, Flask) and HTML (Material Design for CSS)
 ##### Find full documentation at : "https://armiage.github.io/PPDM2/"
