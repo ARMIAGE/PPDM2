@@ -17,7 +17,7 @@ Analogy: Datasets - Google Questions
 ------------------ GUIDE ------------------
 
 ###### 1 - Install Dependencies
-"pip install -r requirements.txt"
+```pip install -r requirements.txt```
 
 ###### 1.2 - Install Developpement Dependencies
 If you want to use our projet in an IDE, please use following command
