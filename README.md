@@ -2,7 +2,7 @@
 ### Word Embedding
 
 ##### Langages : Python (Gensim, Numpy, Scipy, Flask) and HTML (Material Design for CSS)
-##### Find full documentation at : "https://armiage.github.io/PPDM2/"
+##### Find full documentation at https://armiage.github.io/PPDM2/
 
 ------------------ PROJECT DESCRIPTION ------------------
 
@@ -24,7 +24,7 @@ If you want to use our projet in an IDE, please use following command
 "pip install -r requirements_dev.txt"
 
 ###### 2 - Download model
-Download Text8 at "http://mattmahoney.net/dc/textdata.html"
+Download Text8 at http://mattmahoney.net/dc/textdata.html
 And put it in your root projet folder then .\src\MODEL
 
 ###### 3 - Use as command line
