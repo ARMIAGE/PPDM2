@@ -156,17 +156,22 @@
 <dl class="function">
 <dt id="fonctions_utiles.tri_matrice">
 <code class="descclassname">fonctions_utiles.</code><code class="descname">tri_matrice</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fonctions_utiles.tri_matrice" title="Lien permanent vers cette définition">¶</a></dt>
-<dd><p>Cette fonction a pour but de trier la matrice dans l’ordre alphabétique.</p>
+<dd><p>Cette fonction a pour but de trier la matrice par ordre de similiarité décroissant.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Paramètres:</th><td class="field-body"><strong>matrice</strong> – matrice à trier</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Renvoie:</th><td class="field-body">matrice triée dans l’ordre alphabétique sur les deux colonnes mots</td>
+<tr class="field-even field"><th class="field-name">Renvoie:</th><td class="field-body">matrice triée</td>
 </tr>
 </tbody>
 </table>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tri_matrice</span><span class="p">(</span><span class="n">file_insertion</span><span class="o">.</span><span class="n">insert_file_generic</span><span class="p">(</span><span class="s2">&quot;../DATA/matrice_test.csv&quot;</span><span class="p">))</span>
+<span class="go">matrix([[&#39;tiger&#39;, &#39;cat&#39;, &#39;7.35&#39;],</span>
+<span class="go">        [&#39;love&#39;, &#39;sex&#39;, &#39;6.77&#39;]], dtype=&#39;&lt;U32&#39;)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="function">
@@ -188,6 +193,11 @@
 </tr>
 </tbody>
 </table>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">calcul_similarite</span><span class="p">(</span><span class="n">word2vec</span><span class="o">.</span><span class="n">Word2Vec</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;MODEL/W2V_text8_Model.bin&#39;</span><span class="p">),</span><span class="n">extract_liste_de_mots</span><span class="p">(</span><span class="n">liste_de_mots_contenus</span><span class="p">(</span><span class="n">word2vec</span><span class="o">.</span><span class="n">Word2Vec</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;MODEL/W2V_text8_Model.bin&#39;</span><span class="p">),</span> <span class="n">file_insertion</span><span class="o">.</span><span class="n">insert_file_generic</span><span class="p">(</span><span class="s2">&quot;../DATA/matrice_test.csv&quot;</span><span class="p">))))</span>
+<span class="go">array([[&#39;love&#39;, &#39;sex&#39;, &#39;0.41&#39;],</span>
+<span class="go">       [&#39;tiger&#39;, &#39;cat&#39;, &#39;0.55&#39;]], dtype=&#39;&lt;U32&#39;)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="function">
@@ -204,6 +214,11 @@
 </tr>
 </tbody>
 </table>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">extract_liste_de_mots</span><span class="p">(</span><span class="n">liste_de_mots_contenus</span><span class="p">(</span><span class="n">word2vec</span><span class="o">.</span><span class="n">Word2Vec</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;MODEL/W2V_text8_Model.bin&#39;</span><span class="p">),</span> <span class="n">file_insertion</span><span class="o">.</span><span class="n">insert_file_generic</span><span class="p">(</span><span class="s2">&quot;../DATA/matrice_test.csv&quot;</span><span class="p">)))</span>
+<span class="go">array([[&#39;love&#39;, &#39;sex&#39;],</span>
+<span class="go">       [&#39;tiger&#39;, &#39;cat&#39;]], dtype=&#39;&lt;U32&#39;)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="function">
@@ -246,6 +261,11 @@
 </tr>
 </tbody>
 </table>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">liste_de_mots_contenus</span><span class="p">(</span><span class="n">word2vec</span><span class="o">.</span><span class="n">Word2Vec</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;MODEL/W2V_text8_Model.bin&#39;</span><span class="p">),</span> <span class="n">file_insertion</span><span class="o">.</span><span class="n">insert_file_generic</span><span class="p">(</span><span class="s2">&quot;../DATA/matrice_test.csv&quot;</span><span class="p">))</span>
+<span class="go">array([[&#39;love&#39;, &#39;sex&#39;, &#39;6.77&#39;],</span>
+<span class="go">       [&#39;tiger&#39;, &#39;cat&#39;, &#39;7.35&#39;]], dtype=&#39;&lt;U32&#39;)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="function">
@@ -262,6 +282,16 @@
 </tr>
 </tbody>
 </table>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ajouter_colonne_rang</span><span class="p">(</span><span class="n">tri_matrice</span><span class="p">(</span><span class="n">file_insertion</span><span class="o">.</span><span class="n">insert_file_generic</span><span class="p">(</span><span class="s2">&quot;../DATA/matrice_test.csv&quot;</span><span class="p">)))</span>
+<span class="go">matrix([[&#39;tiger&#39;, &#39;cat&#39;, &#39;1&#39;],</span>
+<span class="go">        [&#39;love&#39;, &#39;sex&#39;, &#39;2&#39;]], dtype=&#39;&lt;U32&#39;)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ajouter_colonne_rang</span><span class="p">(</span><span class="n">tri_matrice</span><span class="p">(</span><span class="n">calcul_similarite</span><span class="p">(</span><span class="n">word2vec</span><span class="o">.</span><span class="n">Word2Vec</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;MODEL/W2V_text8_Model.bin&#39;</span><span class="p">),</span><span class="n">extract_liste_de_mots</span><span class="p">(</span><span class="n">liste_de_mots_contenus</span><span class="p">(</span><span class="n">word2vec</span><span class="o">.</span><span class="n">Word2Vec</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;MODEL/W2V_text8_Model.bin&#39;</span><span class="p">),</span> <span class="n">file_insertion</span><span class="o">.</span><span class="n">insert_file_generic</span><span class="p">(</span><span class="s2">&quot;../DATA/matrice_test.csv&quot;</span><span class="p">))))))</span>
+<span class="go">matrix([[&#39;tiger&#39;, &#39;cat&#39;, &#39;1&#39;],</span>
+<span class="go">        [&#39;love&#39;, &#39;sex&#39;, &#39;2&#39;]], dtype=&#39;&lt;U32&#39;)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="function">
@@ -278,12 +308,17 @@
 </tr>
 </tbody>
 </table>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tri_alphabetique</span><span class="p">(</span><span class="n">ajouter_colonne_rang</span><span class="p">(</span><span class="n">tri_matrice</span><span class="p">(</span><span class="n">file_insertion</span><span class="o">.</span><span class="n">insert_file_generic</span><span class="p">(</span><span class="s2">&quot;../DATA/matrice_test.csv&quot;</span><span class="p">))))</span>
+<span class="go">array([[&#39;love&#39;, &#39;sex&#39;, &#39;2&#39;],</span>
+<span class="go">       [&#39;tiger&#39;, &#39;cat&#39;, &#39;1&#39;]], dtype=&#39;&lt;U32&#39;)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="function">
 <dt id="fonctions_utiles.get_rang">
 <code class="descclassname">fonctions_utiles.</code><code class="descname">get_rang</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#fonctions_utiles.get_rang" title="Lien permanent vers cette définition">¶</a></dt>
-<dd><p>Fonbction permettant de récupérer le rang</p>
+<dd><p>Fonction permettant de récupérer le rang</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -294,6 +329,11 @@
 </tr>
 </tbody>
 </table>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">get_rang</span><span class="p">(</span><span class="n">ajouter_colonne_rang</span><span class="p">(</span><span class="n">tri_matrice</span><span class="p">(</span><span class="n">file_insertion</span><span class="o">.</span><span class="n">insert_file_generic</span><span class="p">(</span><span class="s2">&quot;../DATA/matrice_test.csv&quot;</span><span class="p">))))</span>
+<span class="go">matrix([[&#39;1&#39;],</span>
+<span class="go">        [&#39;2&#39;]], dtype=&#39;&lt;U32&#39;)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="function">
@@ -315,6 +355,10 @@
 </tr>
 </tbody>
 </table>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">calcul_corellation</span><span class="p">(</span><span class="n">get_rang</span><span class="p">(</span><span class="n">tri_alphabetique</span><span class="p">(</span><span class="n">ajouter_colonne_rang</span><span class="p">(</span><span class="n">tri_matrice</span><span class="p">(</span><span class="n">file_insertion</span><span class="o">.</span><span class="n">insert_file_generic</span><span class="p">(</span><span class="s2">&quot;../DATA/matrice_test.csv&quot;</span><span class="p">))))),</span><span class="n">get_rang</span><span class="p">(</span><span class="n">tri_alphabetique</span><span class="p">(</span><span class="n">ajouter_colonne_rang</span><span class="p">(</span><span class="n">tri_matrice</span><span class="p">(</span><span class="n">calcul_similarite</span><span class="p">(</span><span class="n">word2vec</span><span class="o">.</span><span class="n">Word2Vec</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;MODEL/W2V_text8_Model.bin&#39;</span><span class="p">),</span><span class="n">extract_liste_de_mots</span><span class="p">(</span><span class="n">liste_de_mots_contenus</span><span class="p">(</span><span class="n">word2vec</span><span class="o">.</span><span class="n">Word2Vec</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;MODEL/W2V_text8_Model.bin&#39;</span><span class="p">),</span> <span class="n">file_insertion</span><span class="o">.</span><span class="n">insert_file_generic</span><span class="p">(</span><span class="s2">&quot;../DATA/matrice_test.csv&quot;</span><span class="p">)))))))))</span>
+<span class="go">1.0</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </div>
