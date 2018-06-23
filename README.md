@@ -1,5 +1,5 @@
 # PPDM2
-### Word Embedding
+### Word Embedding with Google News Vectors
 
 ##### Langages : Python (Gensim, Numpy, Scipy, Flask) and HTML (Material Design for CSS)
 ##### Find full documentation at https://armiage.github.io/PPDM2/
@@ -24,7 +24,7 @@ If you want to use our projet in an IDE, please use following command
 ```pip install -r requirements_dev.txt```
 
 ###### 2 - Download model
-Download Text8 at http://mattmahoney.net/dc/textdata.html
+Download Google News Vector at : https://github.com/mmihaltz/word2vec-GoogleNews-vectors/blob/master/GoogleNews-vectors-negative300.bin.gz
 And put it in your root projet folder then .\src\MODEL
 
 ###### 3 - Use as command line
