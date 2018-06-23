@@ -28,7 +28,7 @@
         <div class="mdl-cell mdl-cell--6-col">
           <H4>Le fichier {{File}} a été traité avec succès !</H4>
           <H5>Le coefficient de qualité est de {{resultat}}</H5>
-          <p>Ce résultat est calculé avec l'aglorithme de Kendall, plus le résultat est proche de 0, plus le fichier est de qualité.</p>
+          <p>Ce résultat est calculé avec l'aglorithme de Kendall, plus le résultat s'approche de 1, plus le fichier est de qualité</p>
            <div id="container" style="min-width: 310px; height: 400px; max-width: 800px; margin: 0 auto"></div>
             </div>
       </div>
@@ -102,20 +102,14 @@ Highcharts.chart('container', {
         }
     },
     series: [{
-        name: 'Qualité optimale',
-        color: '#00FFCB',
+        name: 'Qualité médiocre',
+        color: '#FF0000',
         data: [[0, 0]]
 
     },
-     {
-        name: 'Qualité médiocre',
-        color: '#FF0000',
-        data: [[-1, -1]]
-
-    },
     {
-        name: 'Qualité médiocre',
-        color: '#FF0000',
+        name: 'Qualité optimale',
+        color: '#00FFCB',
         data: [[1, 1]]
 
     },
