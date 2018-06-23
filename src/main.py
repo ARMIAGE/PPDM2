@@ -1,4 +1,7 @@
 import warnings
+
+import gensim
+
 warnings.filterwarnings(action='ignore', category=UserWarning, module='gensim')
 from gensim.models import word2vec
 import file_insertion
@@ -7,7 +10,7 @@ import warnings
 import argparse
 import analogie
 
-#Similarity arguments
+# Similarity arguments
 parser = argparse.ArgumentParser()
 parser.add_argument("--rg", help="Similarity test for rg file", action="store_true")
 parser.add_argument("--cos_matrix", help="Similarity test for cos matrix brm IFR file", action="store_true")
@@ -22,10 +25,13 @@ parser.add_argument("--analogie", help="Analogie with Questions Words (Google) o
 
 args = parser.parse_args()
 
-warnings.filterwarnings('ignore', '.*nan.*',)
+warnings.filterwarnings('ignore', '.*nan.*', )
+
 
 try:
-    model = word2vec.Word2Vec.load('MODEL/W2V_text8_Model.bin')
+    # model = word2vec.Word2Vec.load('MODEL/W2V_text8_Model.bin')
+
+    model = gensim.models.KeyedVectors.load_word2vec_format('MODEL/GoogleNews-vectors-negative300.bin', binary=True)
 except:
     print("Erreur lors de la récupération du Model TEXT8")
 
@@ -74,5 +80,4 @@ elif args.wordsim:
     except:
         print("Erreur lors de l'execution du script de similarité")
 
-#ANALOGIE
-
+# ANALOGIE

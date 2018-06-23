@@ -1,3 +1,4 @@
+import gensim
 from flask import Flask, request, render_template
 app = Flask(__name__)
 import warnings
@@ -21,7 +22,11 @@ def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
 
-model = word2vec.Word2Vec.load('MODEL/W2V_text8_Model.bin')
+# model = word2vec.Word2Vec.load('MODEL/W2V_text8_Model.bin')
+
+
+model = gensim.models.KeyedVectors.load_word2vec_format('MODEL/GoogleNews-vectors-negative300-SLIM.bin', binary=True)
+
 
 @app.context_processor
 def titre():

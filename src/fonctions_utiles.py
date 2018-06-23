@@ -35,7 +35,8 @@ def liste_de_mots_contenus(model, data):
 
 
         """
-    word_vectors = model.wv
+    #word_vectors = model.wv
+    word_vectors = model
     l = 0
     for row in data:
         rep_mot1 = est_dans_le_model(word_vectors, row[0])
@@ -97,8 +98,8 @@ def calcul_similarite(model, liste_mots):
     for ligne in liste_mots:
         matrice[(i, 0)] = ligne[0]
         matrice[(i, 1)] = ligne[1]
-        matrice[(i, 2)] = (round(model.wv.similarity(ligne[0], ligne[1]),2))
-        i = i + 1
+        #matrice[(i, 2)] = (round(model.wv.similarity(ligne[0], ligne[1]),2))
+        matrice[(i, 2)] = (round(model.similarity(ligne[0], ligne[1]), 2))
     return matrice
 
 
