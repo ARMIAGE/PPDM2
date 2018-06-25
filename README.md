@@ -29,6 +29,7 @@ And put it in your root project folder then .\src\MODEL
 
 ###### 3 - Use as command line
 Open a console, go in your root project folder
+
 And type ```python main.py --help``` and get all option to use this project
 
 ###### 4 - Use as a website
