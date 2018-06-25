@@ -6,6 +6,9 @@
 Welcome to Word Embeddings's documentation!
 ===========================================
 
+Bienvenue sur la documentation technique de l'application Word Embeddings. 
+Vous y trouverez la documentation de toutes les fonctions ainsi que les résultats des Doctests.
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
@@ -20,10 +23,3 @@ Welcome to Word Embeddings's documentation!
 
 
 
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
