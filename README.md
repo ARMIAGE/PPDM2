@@ -25,7 +25,7 @@ If you want to use our projet in an IDE, please use following command
 
 ###### 2 - Download model
 Download Text8 at http://mattmahoney.net/dc/textdata.html
-And put it in your root projet folder then .\src\MODEL
+And put it in your root project folder then .\src\MODEL
 
 ###### 3 - Use as command line
 Open a console, go in your root project folder
