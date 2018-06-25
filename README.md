@@ -20,21 +20,15 @@ Analogy: Datasets - Google Questions
 ```pip install -r requirements.txt```
 
 ###### 1.2 - Install Developpement Dependencies
-If you want to use our projet in an IDE, please use following command
-```pip install -r requirements_dev.txt```
+If you want to use our projet in an IDE, please use following command ```pip install -r requirements_dev.txt```
 
 ###### 2 - Download model
-Download Text8 at http://mattmahoney.net/dc/textdata.html
-And put it in your root project folder then .\src\MODEL
+Download Text8 at http://mattmahoney.net/dc/textdata.html and put it in your root project folder then .\src\MODEL
 
 ###### 3 - Use as command line
-Open a console, go in your root project folder
-
-
-And type ```python main.py --help``` and get all option to use this project
+Open a console, go in your root project folder and type ```python main.py --help``` and get all option to use this project
 
 ###### 4 - Use as a website
-In your favorite IDE launch BackServ.py
-And go at the following URL http://127.0.0.1:5000
+In your favorite IDE launch BackServ.py and go at the following URL http://127.0.0.1:5000
 
 ------
